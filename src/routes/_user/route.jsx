@@ -45,8 +45,8 @@ function RouteComponent() {
       link: "/profile",
     },
     {
-      name: "Create",
-      link: "/create",
+      name: "List Queries",
+      link: "/listqueries",
     },
     {
       name: "Feedback",

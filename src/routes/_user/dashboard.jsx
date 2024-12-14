@@ -1,13 +1,10 @@
 import Cards from "@/components/Card/Cards";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, capitalize, Stack, Typography } from "@mui/material";
 import { createFileRoute } from "@tanstack/react-router";
 import { useAuth } from "@/lib/Auth";
 import { localBusinessOwners } from "@/lib/Databases/lbo";
 import { shops } from "@/lib/Databases/shop";
 export const Route = createFileRoute("/_user/dashboard")({
-  beforeLoad: () => {
-    console.log("beforeLoad");
-  },
   component: RouteComponent,
 });
 
@@ -27,7 +24,7 @@ function RouteComponent() {
   const { getUser } = useAuth();
   const userId = getUser()[0]["id"];
   const userLBO = localBusinessOwners.filter((lbo) => lbo.userId === userId);
-  const userShops = shops.filter((shop) => shop.UserId === userId);
+  const userShops = shops.filter((shop) => shop.userId === userId);
   const boxStyle = {
     width: "100%",
     border: "1px solid #f0f0f0",
@@ -54,14 +51,17 @@ function RouteComponent() {
         </Stack>
       </Box>
       <Box sx={boxStyle}>
+        {userLBO.length > 0 ? (
+        <Typography variant="h6" gutterBottom>Business Purposed</Typography>)
+        : null  
+        }
         {userLBO.length > 0 ?userLBO.map((lbo, index) => {
           return (
             <Cards
               key={index}
               title={lbo.title}
               description={lbo.excerpt}
-              buttonText="Cancel"
-              type={lbo.userField}
+              type={capitalize(lbo.userField)}
               price={"Asked On: " + lbo.date}
             />
           );
@@ -73,16 +73,16 @@ function RouteComponent() {
       }
       </Box>
       <Box sx={boxStyle}>
-
+        {userShops.length > 0 ? ( <Typography variant="h6" gutterBottom>Shops</Typography>): null}
         {userShops.length > 0 ? userShops.map((shop, index) => {
           return (
             <Cards
               key={index}
-              title={shop.title}
-              description={shop.excerpt}
+              title={shop.shopName}
+              description={shop.shopDescription}
               buttonText="Cancel"
-              type={shop.userField}
-              price={"Asked On: " + shop.date}
+              type={capitalize(shop.shopCategory)}
+              price={"Asked By: " + getUser()[0]["firstname"]+" "+getUser()[0]["lastname"]}
             />
           );
         }

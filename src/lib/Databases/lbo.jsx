@@ -14,7 +14,7 @@ const localBusinessOwners = [
         "userType": "lbo",
         "userField": "micro",
         "excerpt": "Looking for tips to expand a home bakery business.",
-        "userId": 5,
+        "userId": 41,
         "date": "2024-12-11"
       },
       {
@@ -32,7 +32,7 @@ const localBusinessOwners = [
         "userType": "lbo",
         "userField": "small",
         "excerpt": "Seeks guidance on local market opportunities.",
-        "userId": 9,
+        "userId": 41,
         "date": "2024-12-09"
       },
       {

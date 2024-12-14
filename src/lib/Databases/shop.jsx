@@ -1,183 +1,183 @@
 const shops = [
   {
-    ShopID: 27,
-    UserID: 24,
-    ShopName: "Design Studio",
-    ShopDescription:
+    "shopId": 27,
+    "userId": 24,
+    "shopName": "Design Studio",
+    "shopDescription":
       "Design Studio is a well-known place for furniture enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 2",
-    ShopCategory: "furniture",
+    "shopLocation": "Location 2",
+    "shopCategory": "furniture",
   },
   {
-    ShopID: 11,
-    UserID: 32,
-    ShopName: "Kids Kingdom",
-    ShopDescription:
+    "shopId": 11,
+    "userId": 32,
+    "shopName": "Kids Kingdom",
+    "shopDescription":
       "Kids Kingdom is a well-known place for toys enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 11",
-    ShopCategory: "toys",
+    "shopLocation": "Location 11",
+    "shopCategory": "toys",
   },
   {
-    ShopID: 32,
-    UserID: 34,
-    ShopName: "Bliss Spa",
-    ShopDescription:
+    "shopId": 32,
+    "userId": 34,
+    "shopName": "Bliss Spa",
+    "shopDescription":
       "Bliss Spa is a well-known place for beauty enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 20",
-    ShopCategory: "beauty",
+    "shopLocation": "Location 20",
+    "shopCategory": "beauty",
   },
   {
-    ShopID: 7,
-    UserID: 15,
-    ShopName: "Bookworms Corner",
-    ShopDescription:
+    "shopId": 7,
+    "userId": 15,
+    "shopName": "Bookworms Corner",
+    "shopDescription":
       "Bookworms Corner is a well-known place for books enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 13",
-    ShopCategory: "books",
+    "shopLocation": "Location 13",
+    "shopCategory": "books",
   },
   {
-    ShopID: 71,
-    UserID: 7,
-    ShopName: "Fun Time Toys",
-    ShopDescription:
+    "shopId": 71,
+    "userId": 7,
+    "shopName": "Fun Time Toys",
+    "shopDescription":
       "Fun Time Toys is a well-known place for toys enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 16",
-    ShopCategory: "toys",
+    "shopLocation": "Location 16",
+    "shopCategory": "toys",
   },
   {
-    ShopID: 100,
-    UserID: 34,
-    ShopName: "Fun Time Toys",
-    ShopDescription:
+    "shopId": 100,
+    "userId": 34,
+    "shopName": "Fun Time Toys",
+    "shopDescription":
       "Fun Time Toys is a well-known place for toys enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 13",
-    ShopCategory: "toys",
+    "shopLocation": "Location 13",
+    "shopCategory": "toys",
   },
   {
-    ShopID: 93,
-    UserID: 22,
-    ShopName: "City Fashion",
-    ShopDescription:
+    "shopId": 93,
+    "userId": 22,
+    "shopName": "City Fashion",
+    "shopDescription":
       "City Fashion is a well-known place for clothing enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 2",
-    ShopCategory: "clothing",
+    "shopLocation": "Location 2",
+    "shopCategory": "clothing",
   },
   {
-    ShopID: 59,
-    UserID: 23,
-    ShopName: "Pro Gear Sports",
-    ShopDescription:
+    "shopId": 59,
+    "userId": 23,
+    "shopName": "Pro Gear Sports",
+    "shopDescription":
       "Pro Gear Sports is a well-known place for sports enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 12",
-    ShopCategory: "sports",
+    "shopLocation": "Location 12",
+    "shopCategory": "sports",
   },
   {
-    ShopID: 19,
-    UserID: 22,
-    ShopName: "Fitness Zone",
-    ShopDescription:
+    "shopId": 19,
+    "userId": 22,
+    "shopName": "Fitness Zone",
+    "shopDescription":
       "Fitness Zone is a well-known place for sports enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 4",
-    ShopCategory: "sports",
+    "shopLocation": "Location 4",
+    "shopCategory": "sports",
   },
   {
-    ShopID: 87,
-    UserID: 33,
-    ShopName: "Momo Delight",
-    ShopDescription:
+    "shopId": 87,
+    "userId": 33,
+    "shopName": "Momo Delight",
+    "shopDescription":
       "Momo Delight is a well-known place for food enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 2",
-    ShopCategory: "food",
+    "shopLocation": "Location 2",
+    "shopCategory": "food",
   },
   {
-    ShopID: 82,
-    UserID: 68,
-    ShopName: "Sweet Treats",
-    ShopDescription:
+    "shopId": 82,
+    "userId": 68,
+    "shopName": "Sweet Treats",
+    "shopDescription":
       "Sweet Treats is a well-known place for bakery enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 2",
-    ShopCategory: "bakery",
+    "shopLocation": "Location 2",
+    "shopCategory": "bakery",
   },
   {
-    ShopID: 49,
-    UserID: 85,
-    ShopName: "Tech World",
-    ShopDescription:
+    "shopId": 49,
+    "userId": 85,
+    "shopName": "Tech World",
+    "shopDescription":
       "Tech World is a well-known place for electronics enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 10",
-    ShopCategory: "electronics",
+    "shopLocation": "Location 10",
+    "shopCategory": "electronics",
   },
   {
-    ShopID: 47,
-    UserID: 80,
-    ShopName: "Pro Gear Sports",
-    ShopDescription:
+    "shopId": 47,
+    "userId": 80,
+    "shopName": "Pro Gear Sports",
+    "shopDescription":
       "Pro Gear Sports is a well-known place for sports enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 20",
-    ShopCategory: "sports",
+    "shopLocation": "Location 20",
+    "shopCategory": "sports",
   },
   {
-    ShopID: 78,
-    UserID: 88,
-    ShopName: "Pro Gear Sports",
-    ShopDescription:
+    "shopId": 78,
+    "userId": 88,
+    "shopName": "Pro Gear Sports",
+    "shopDescription":
       "Pro Gear Sports is a well-known place for sports enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 5",
-    ShopCategory: "sports",
+    "shopLocation": "Location 5",
+    "shopCategory": "sports",
   },
   {
-    ShopID: 77,
-    UserID: 99,
-    ShopName: "New Everest Restaurant",
-    ShopDescription:
+    "shopId": 77,
+    "userId": 99,
+    "shopName": "New Everest Restaurant",
+    "shopDescription":
       "New Everest Restaurant is a well-known place for food enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 19",
-    ShopCategory: "food",
+    "shopLocation": "Location 19",
+    "shopCategory": "food",
   },
   {
-    ShopID: 48,
-    UserID: 74,
-    ShopName: "Daily Needs Store",
-    ShopDescription:
+    "shopId": 48,
+    "userId": 74,
+    "shopName": "Daily Needs Store",
+    "shopDescription":
       "Daily Needs Store is a well-known place for grocery enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 7",
-    ShopCategory: "grocery",
+    "shopLocation": "Location 7",
+    "shopCategory": "grocery",
   },
   {
-    ShopID: 95,
-    UserID: 50,
-    ShopName: "Active Lifestyle",
-    ShopDescription:
+    "shopId": 95,
+    "userId": 50,
+    "shopName": "Active Lifestyle",
+    "shopDescription":
       "Active Lifestyle is a well-known place for sports enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 10",
-    ShopCategory: "sports",
+    "shopLocation": "Location 10",
+    "shopCategory": "sports",
   },
   {
-    ShopID: 98,
-    UserID: 99,
-    ShopName: "Pro Gear Sports",
-    ShopDescription:
+    "shopId": 98,
+    "userId": 99,
+    "shopName": "Pro Gear Sports",
+    "shopDescription":
       "Pro Gear Sports is a well-known place for sports enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 17",
-    ShopCategory: "sports",
+    "shopLocation": "Location 17",
+    "shopCategory": "sports",
   },
   {
-    ShopID: 69,
-    UserID: 57,
-    ShopName: "Glow Beauty Salon",
-    ShopDescription:
+    "shopId": 69,
+    "userId": 57,
+    "shopName": "Glow Beauty Salon",
+    "shopDescription":
       "Glow Beauty Salon is a well-known place for beauty enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 4",
-    ShopCategory: "beauty",
+    "shopLocation": "Location 4",
+    "shopCategory": "beauty",
   },
   {
-    ShopID: 55,
-    UserID: 70,
-    ShopName: "Bookworms Corner",
-    ShopDescription:
+    "shopId": 55,
+    "userId": 41,
+    "shopName": "Bookworms Corner",
+    "shopDescription":
       "Bookworms Corner is a well-known place for books enthusiasts, providing top-notch service and quality.",
-    ShopLocation: "Location 6",
-    ShopCategory: "books",
+    "shopLocation": "Location 6",
+    "shopCategory": "books",
   },
 ];
 

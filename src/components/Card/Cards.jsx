@@ -64,9 +64,12 @@ const Cards = ({title, price, type, description, buttonText, link=null}) => {
                 {price}
               </Typography>
               <Link to={link}>
-              <Button variant="contained" sx={{ backgroundColor: "#01311e", color: "#fff", fontSize: ".8rem", padding: "5px 10px", borderRadius: "5px" }}>
+              {
+                buttonText ? (
+                  <Button variant="contained" sx={{ backgroundColor: "#01311e", color: "#fff", fontSize: ".8rem", padding: "5px 10px", borderRadius: "5px" }}>
                 {buttonText}
-              </Button>
+              </Button>) : null
+              }
               </Link>
             </Stack>
           </Stack>
