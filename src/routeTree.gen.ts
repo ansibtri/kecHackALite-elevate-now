@@ -24,6 +24,8 @@ const SearchLazyImport = createFileRoute('/search')()
 const FeedbackLazyImport = createFileRoute('/feedback')()
 const UserTrainingLazyImport = createFileRoute('/_user/training')()
 const UserProfileLazyImport = createFileRoute('/_user/profile')()
+const UserLboLazyImport = createFileRoute('/_user/lbo')()
+const UserFbLazyImport = createFileRoute('/_user/fb')()
 const UserCreateLazyImport = createFileRoute('/_user/create')()
 const authRegisterLazyImport = createFileRoute('/(auth)/register')()
 const authRecoverLazyImport = createFileRoute('/(auth)/recover')()
@@ -68,6 +70,18 @@ const UserProfileLazyRoute = UserProfileLazyImport.update({
   path: '/profile',
   getParentRoute: () => UserRouteRoute,
 } as any).lazy(() => import('./routes/_user/profile.lazy').then((d) => d.Route))
+
+const UserLboLazyRoute = UserLboLazyImport.update({
+  id: '/lbo',
+  path: '/lbo',
+  getParentRoute: () => UserRouteRoute,
+} as any).lazy(() => import('./routes/_user/lbo.lazy').then((d) => d.Route))
+
+const UserFbLazyRoute = UserFbLazyImport.update({
+  id: '/fb',
+  path: '/fb',
+  getParentRoute: () => UserRouteRoute,
+} as any).lazy(() => import('./routes/_user/fb.lazy').then((d) => d.Route))
 
 const UserCreateLazyRoute = UserCreateLazyImport.update({
   id: '/create',
@@ -193,6 +207,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UserCreateLazyImport
       parentRoute: typeof UserRouteImport
     }
+    '/_user/fb': {
+      id: '/_user/fb'
+      path: '/fb'
+      fullPath: '/fb'
+      preLoaderRoute: typeof UserFbLazyImport
+      parentRoute: typeof UserRouteImport
+    }
+    '/_user/lbo': {
+      id: '/_user/lbo'
+      path: '/lbo'
+      fullPath: '/lbo'
+      preLoaderRoute: typeof UserLboLazyImport
+      parentRoute: typeof UserRouteImport
+    }
     '/_user/profile': {
       id: '/_user/profile'
       path: '/profile'
@@ -222,6 +250,8 @@ declare module '@tanstack/react-router' {
 interface UserRouteRouteChildren {
   UserDashboardRoute: typeof UserDashboardRoute
   UserCreateLazyRoute: typeof UserCreateLazyRoute
+  UserFbLazyRoute: typeof UserFbLazyRoute
+  UserLboLazyRoute: typeof UserLboLazyRoute
   UserProfileLazyRoute: typeof UserProfileLazyRoute
   UserTrainingLazyRoute: typeof UserTrainingLazyRoute
   UserConsultantIndexLazyRoute: typeof UserConsultantIndexLazyRoute
@@ -230,6 +260,8 @@ interface UserRouteRouteChildren {
 const UserRouteRouteChildren: UserRouteRouteChildren = {
   UserDashboardRoute: UserDashboardRoute,
   UserCreateLazyRoute: UserCreateLazyRoute,
+  UserFbLazyRoute: UserFbLazyRoute,
+  UserLboLazyRoute: UserLboLazyRoute,
   UserProfileLazyRoute: UserProfileLazyRoute,
   UserTrainingLazyRoute: UserTrainingLazyRoute,
   UserConsultantIndexLazyRoute: UserConsultantIndexLazyRoute,
@@ -250,6 +282,8 @@ export interface FileRoutesByFullPath {
   '/recover': typeof authRecoverLazyRoute
   '/register': typeof authRegisterLazyRoute
   '/create': typeof UserCreateLazyRoute
+  '/fb': typeof UserFbLazyRoute
+  '/lbo': typeof UserLboLazyRoute
   '/profile': typeof UserProfileLazyRoute
   '/training': typeof UserTrainingLazyRoute
   '/consultant': typeof UserConsultantIndexLazyRoute
@@ -266,6 +300,8 @@ export interface FileRoutesByTo {
   '/recover': typeof authRecoverLazyRoute
   '/register': typeof authRegisterLazyRoute
   '/create': typeof UserCreateLazyRoute
+  '/fb': typeof UserFbLazyRoute
+  '/lbo': typeof UserLboLazyRoute
   '/profile': typeof UserProfileLazyRoute
   '/training': typeof UserTrainingLazyRoute
   '/consultant': typeof UserConsultantIndexLazyRoute
@@ -283,6 +319,8 @@ export interface FileRoutesById {
   '/(auth)/recover': typeof authRecoverLazyRoute
   '/(auth)/register': typeof authRegisterLazyRoute
   '/_user/create': typeof UserCreateLazyRoute
+  '/_user/fb': typeof UserFbLazyRoute
+  '/_user/lbo': typeof UserLboLazyRoute
   '/_user/profile': typeof UserProfileLazyRoute
   '/_user/training': typeof UserTrainingLazyRoute
   '/_user/consultant/': typeof UserConsultantIndexLazyRoute
@@ -301,6 +339,8 @@ export interface FileRouteTypes {
     | '/recover'
     | '/register'
     | '/create'
+    | '/fb'
+    | '/lbo'
     | '/profile'
     | '/training'
     | '/consultant'
@@ -316,6 +356,8 @@ export interface FileRouteTypes {
     | '/recover'
     | '/register'
     | '/create'
+    | '/fb'
+    | '/lbo'
     | '/profile'
     | '/training'
     | '/consultant'
@@ -331,6 +373,8 @@ export interface FileRouteTypes {
     | '/(auth)/recover'
     | '/(auth)/register'
     | '/_user/create'
+    | '/_user/fb'
+    | '/_user/lbo'
     | '/_user/profile'
     | '/_user/training'
     | '/_user/consultant/'
@@ -387,6 +431,8 @@ export const routeTree = rootRoute
       "children": [
         "/_user/dashboard",
         "/_user/create",
+        "/_user/fb",
+        "/_user/lbo",
         "/_user/profile",
         "/_user/training",
         "/_user/consultant/"
@@ -416,6 +462,14 @@ export const routeTree = rootRoute
     },
     "/_user/create": {
       "filePath": "_user/create.lazy.jsx",
+      "parent": "/_user"
+    },
+    "/_user/fb": {
+      "filePath": "_user/fb.lazy.jsx",
+      "parent": "/_user"
+    },
+    "/_user/lbo": {
+      "filePath": "_user/lbo.lazy.jsx",
       "parent": "/_user"
     },
     "/_user/profile": {

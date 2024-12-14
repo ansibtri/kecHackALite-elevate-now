@@ -11,6 +11,7 @@ import {
 const Footer = () => {
   return (
     <Box
+    id="contact"
       sx={{
         background: "#01311e",
         color: "white",

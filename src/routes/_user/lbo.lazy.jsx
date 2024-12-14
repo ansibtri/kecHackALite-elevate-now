@@ -80,7 +80,6 @@ function RouteComponent() {
             description={lbo.excerpt}
             buttonText="Contact Now"
             link="https://api.whatsapp.com/send/?phone=9800000002&text&type=phone_number&app_absent=0"
-
           />
         ))
       }
